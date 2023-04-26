@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AlarmFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/alarm"
+            android:textSize="36sp"
+            android:gravity="center"
+            app:layout_constraintHeight_percent="0.35"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/setting_constraint_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintTop_toBottomOf="@id/text_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/mini_title_text_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/alarm"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="15dp"
+                app:layout_constraintWidth_percent="0.8"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/plus_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icons8_plus_24"
+                android:background="@color/white"
+                app:layout_constraintWidth_percent="0.1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mini_title_text_view"/>
+
+            <ImageButton
+                android:id="@+id/option_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/three_dots_vertical_svgrepo_com"
+                android:background="@color/white"
+                app:layout_constraintWidth_percent="0.1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/plus_button"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Add alarm"
+            style="@style/RoundedButton"
+            android:drawableStart="@drawable/icons8_plus_24"
+            app:layout_constraintWidth_percent="0.6"
+            app:layout_constraintHeight_percent="0.08"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/setting_constraint_view"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>
